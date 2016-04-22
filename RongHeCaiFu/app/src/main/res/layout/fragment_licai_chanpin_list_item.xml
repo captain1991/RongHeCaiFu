@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gv_item_bg">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/licai_item_top_right_iv_size"
+        android:layout_height="@dimen/licai_item_top_right_iv_size"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/xinshou"
+        android:scaleType="fitCenter" />
+
+    <!--
+    大小比例：
+    7          6.5
+    6          6
+    17.5       7
+    -->
+
+    <LinearLayout
+        android:id="@+id/panel_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/licai_item_left"
+                android:layout_width="@dimen/licai_item_top_left_iv_size"
+                android:layout_height="wrap_content"
+                android:scaleType="fitStart"
+                android:src="@drawable/che" />
+
+            <TextView
+                android:id="@+id/tv_left_title"
+                style="@style/licai_item_text1_style"
+                android:gravity="center"
+                android:text="车融宝B12009"
+                android:layout_marginTop = "3dp"
+                android:layout_marginLeft="10dp"/>
+            <!-- A120011-->
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_yqnh"
+            style="@style/licai_item_text2_style"
+            android:layout_marginTop="10dp"
+            android:text="预期年化" />
+
+        <TextView
+            android:id="@+id/tv_percent"
+            style="@style/licai_item_text3_style"
+            android:layout_marginTop="5dp"
+            android:text="15.00%" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/licai_item_part2_left_margin"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/panel_left"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_qtje"
+            style="@style/licai_item_text4_style"
+            android:gravity="top|left"
+            android:text="100元起投" />
+
+        <TextView
+            android:id="@+id/tv_rzje"
+            style="@style/licai_item_text2_style"
+            android:layout_marginTop="10dp"
+            android:text="融资金额200,0000元" />
+
+        <TextView
+            android:id="@+id/tv_qx"
+            style="@style/licai_item_text2_style"
+            android:layout_marginTop="5dp"
+            android:text="期限 3个月" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:layout_width="@dimen/iv_clock_size"
+                android:layout_height="@dimen/iv_clock_size"
+                android:background="@drawable/clock"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/licai_item_text2_style"
+                android:layout_marginLeft="5dp"
+                android:text="0天24小时15分5秒" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
