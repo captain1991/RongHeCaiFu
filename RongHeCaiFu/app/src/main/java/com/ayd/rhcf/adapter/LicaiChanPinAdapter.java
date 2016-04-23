@@ -50,6 +50,7 @@ public class LicaiChanPinAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.fragment_licai_chanpin_list_item, parent, false);
             viewHolder = new ViewHolder();
+            viewHolder.mIvLeftImg = (ImageView) convertView.findViewById(R.id.licai_item_left);
             viewHolder.mTvLeftTitle = (TextView) convertView.findViewById(R.id.tv_left_title);
             viewHolder.mTvYqnh = (TextView) convertView.findViewById(R.id.tv_yqnh);
             viewHolder.mTvPercent = (TextView) convertView.findViewById(R.id.tv_percent);
@@ -73,6 +74,7 @@ public class LicaiChanPinAdapter extends BaseAdapter {
 
 
     class ViewHolder {
+        public ImageView mIvLeftImg;
         public TextView mTvLeftTitle;
         public TextView mTvYqnh;
         public TextView mTvPercent;
