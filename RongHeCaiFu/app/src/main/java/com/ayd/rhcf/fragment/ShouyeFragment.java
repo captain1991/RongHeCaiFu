@@ -128,17 +128,17 @@ public class ShouyeFragment extends BaseFragment implements PtrCallBack, ClickEv
         refreshLayout.setPullDownEnable(true);
         refreshLayout.setPullUpEnable(true);
         refreshLayout.setOnPullListener(new PullToRefreshLayout.OnPullListener() {
-           @Override
-           public void onRefresh(PullToRefreshLayout pullToRefreshLayout) {
-               LogUtil.i("onRefresh");
+            @Override
+            public void onRefresh(PullToRefreshLayout pullToRefreshLayout) {
+                LogUtil.i("onRefresh");
                refreshLayout.refreshFinish(PullToRefreshLayout.SUCCEED);
-           }
+            }
 
-           @Override
-           public void onLoadMore(PullToRefreshLayout pullToRefreshLayout) {
-               LogUtil.i("onLoadMore");
-               refreshLayout.loadmoreFinish(PullToRefreshLayout.FAIL);
-           }
+            @Override
+            public void onLoadMore(PullToRefreshLayout pullToRefreshLayout) {
+                LogUtil.i("onLoadMore");
+                refreshLayout.loadmoreFinish(PullToRefreshLayout.FAIL);
+            }
         });
         //首次自动刷新；
 //        refreshLayout.autoRefresh();

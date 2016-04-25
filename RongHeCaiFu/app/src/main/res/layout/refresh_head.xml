@@ -25,14 +25,16 @@
                 android:layout_marginLeft="60dp"
                 android:background="@drawable/pulldown_icon_big" />
 
-            <ImageView
+            <ProgressBar
                 android:id="@+id/refreshing_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="60dp"
-                android:background="@drawable/refreshing"
+
                 android:visibility="gone" />
+            <!--android:src="@drawable/refreshnew"-->
+
 
             <TextView
                 android:id="@+id/state_tv"
