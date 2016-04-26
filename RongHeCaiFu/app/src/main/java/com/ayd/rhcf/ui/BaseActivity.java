@@ -3,6 +3,7 @@ package com.ayd.rhcf.ui;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -14,6 +15,7 @@ import com.ayd.rhcf.AppConstants;
 import com.ayd.rhcf.HttpProxy;
 import com.ayd.rhcf.R;
 import com.ayd.rhcf.utils.LogUtil;
+import com.ayd.rhcf.utils.StatusBarCompat;
 import com.umeng.analytics.MobclickAgent;
 
 import java.util.Arrays;
@@ -40,6 +42,7 @@ public abstract class BaseActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResId());
+        StatusBarCompat.compat(this, Color.parseColor("#0992C4"));
         initTitleBar();
     }
 

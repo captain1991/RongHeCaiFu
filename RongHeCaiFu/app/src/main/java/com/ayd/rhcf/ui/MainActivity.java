@@ -32,7 +32,6 @@ import com.ayd.rhcf.utils.LogUtil;
 import com.ayd.rhcf.utils.ToastUtil;
 import com.ayd.rhcf.utils.UmsUtil;
 import com.umeng.analytics.MobclickAgent;
-import com.umeng.socialize.UMShareAPI;
 
 import cn.jpush.android.api.JPushInterface;
 

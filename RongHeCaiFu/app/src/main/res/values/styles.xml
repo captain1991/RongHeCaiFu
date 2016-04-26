@@ -455,4 +455,7 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
+    <style name="AppTheme" parent="@android:style/Theme.Light.NoTitleBar">
+    </style>
+
 </resources>
