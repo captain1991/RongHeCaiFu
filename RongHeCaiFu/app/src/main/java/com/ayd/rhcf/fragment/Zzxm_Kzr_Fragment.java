@@ -60,10 +60,11 @@ public class Zzxm_Kzr_Fragment extends BaseLazyFragment implements PtrCallBack,
 
     private void init(View view) {
         refreshLayout = (PullToRefreshLayout) view.findViewById(R.id.refreshLayout);
-        refreshListView = (ListView) refreshLayout.getPullableView();
+        refreshListView = (ListView) view.findViewById(R.id.pullableListView);
         refreshListView.setFooterDividersEnabled(false);
         refreshListView.setHeaderDividersEnabled(false);
-
+        View empty = view.findViewById(R.id.empty_view_zz);
+        refreshListView.setEmptyView(empty);
         adapter = new ZzxmAdapter(getActivity());
 
         adapter.setAadapterEventCallBack(this);

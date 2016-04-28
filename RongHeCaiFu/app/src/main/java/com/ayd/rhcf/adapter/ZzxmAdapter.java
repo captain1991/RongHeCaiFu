@@ -34,7 +34,7 @@ public class ZzxmAdapter extends BaseAdapter {
     @Override
     public int getCount() {
 //        return dataList == null ? 0 : dataList.size();
-        return 3;
+        return 0;
     }
 
     @Override

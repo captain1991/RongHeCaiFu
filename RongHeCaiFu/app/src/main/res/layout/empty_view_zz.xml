@@ -17,8 +17,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:src="@drawable/zhanwushuju"
+            android:src="@drawable/zzempty"
             />
+        <TextView
+            android:layout_marginTop="@dimen/text_size_20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_20sp"
+            android:layout_below="@id/empty_image"
+            android:gravity="center_horizontal"
+            android:text="暂无可转项目"/>
     </RelativeLayout>
+
 
 </LinearLayout>

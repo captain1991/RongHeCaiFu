@@ -58,11 +58,13 @@ public class Ztxm_Tbz_Fragment extends BaseLazyFragment implements PtrCallBack{
 
     private void assignViews(View view) {
         refreshLayout = (PullToRefreshLayout) view.findViewById(R.id.refreshLayout);
-        refreshListView = (ListView) refreshLayout.getPullableView();
+        refreshListView = (ListView) view.findViewById(R.id.pullableListView);
+//                refreshLayout.getPullableView();
         refreshListView.setFooterDividersEnabled(false);
         refreshListView.setHeaderDividersEnabled(false);
         adapter = new ZtxmAdapter(getActivity());
-//        View empty = view.findViewById(R.id.empty_view);
+        View empty = view.findViewById(R.id.empty_view);
+        refreshListView.setEmptyView(empty);
 //        refreshLayout.setVisibility(View.GONE);
         refreshListView.setAdapter(adapter);
         PtrRefreshRegister.regist(refreshLayout, this);

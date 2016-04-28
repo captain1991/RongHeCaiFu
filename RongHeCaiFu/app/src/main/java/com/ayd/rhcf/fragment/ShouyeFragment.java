@@ -34,12 +34,7 @@ import com.ayd.rhcf.utils.UmsUtil;
 import com.ayd.rhcf.view.SlideShowView;
 import com.ayd.rhcf.view.pulltorefresh.PullToRefreshLayout;
 import com.ayd.rhcf.view.pulltorefresh.PullableListView;
-import com.umeng.socialize.ShareAction;
-import com.umeng.socialize.UMAuthListener;
-import com.umeng.socialize.UMShareAPI;
-import com.umeng.socialize.UMShareListener;
 import com.umeng.socialize.bean.SHARE_MEDIA;
-import com.umeng.socialize.media.UMImage;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -211,8 +206,8 @@ public class ShouyeFragment extends BaseFragment implements PtrCallBack, ClickEv
             readyGo(activity, GywmActivity.class);
 //            UmsUtil.openShareBoad(getActivity());
         } else if (mPanelPtgg.getId() == viewId) {
-            UmsUtil.goShouquan(getActivity(), SHARE_MEDIA.QQ);
-//            readyGo(activity, PtggActivity.class);
+//            UmsUtil.goShouquan(getActivity(), SHARE_MEDIA.QQ);
+            readyGo(activity, PtggActivity.class);
         } else if (mPanelYqhy.getId() == viewId) {
             readyGo(activity, YqhyActivity.class);
         } else if (mPanelSyjs.getId() == viewId) {
