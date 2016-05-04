@@ -26,7 +26,7 @@
             android:textSize="@dimen/text_size_20sp"
             android:layout_below="@id/empty_image"
             android:gravity="center_horizontal"
-            android:text="暂无可转项目"/>
+            android:text="暂无项目"/>
     </RelativeLayout>
 
 
