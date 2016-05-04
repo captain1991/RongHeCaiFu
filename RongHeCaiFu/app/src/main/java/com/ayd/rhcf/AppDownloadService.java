@@ -153,8 +153,8 @@ public class AppDownloadService extends IntentService {
 
         HttpUtils httpUtils = new HttpUtils();
         httpUtils.download(downloadUrl, targetFilePath,
-                true,
-                true,
+                true,//有未完成的下载任务是否接着下载
+                task_id == AppConstants.APP_UPDATE_ID ? true : false,//是否使用检测到的文件名(热更新文件名是固定)
                 new RequestCallBack<File>() {
 
                     /**
@@ -236,6 +236,8 @@ public class AppDownloadService extends IntentService {
                     current += count;
                     sendCurDownloadRate(total, current);
                 }
+                //下载完成安装apk或进行热更新
+
             } else {
                 downLoadError(task_id);
             }

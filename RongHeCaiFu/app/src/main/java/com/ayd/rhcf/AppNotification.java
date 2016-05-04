@@ -44,20 +44,20 @@ public class AppNotification {
 
     public static void setNotification(Context context, String content, int notificationId) {
         NotificationManager nmcLocal = getNotificationManager(context);
+        Notification.Builder builder=null;
+        if (builder == null) {
+            builder = new Notification.Builder(context.getApplicationContext());
+            builder.setSmallIcon(R.drawable.ic_launcher)
+                    .setAutoCancel(false)
+                    .setWhen(System.currentTimeMillis())
+                    .setContentTitle("正在下载...")
+                    .setOngoing(true)   // 禁止滑动删除；
+                    .setContentText(content)
+                    .setContentIntent(null);
+        }
+        Notification notification = builder.setContentText(content).build();
 
-//        if (builder == null) {
-//            builder = new Notification.Builder(context.getApplicationContext());
-//            builder.setSmallIcon(R.drawable.ic_launcher)
-//                    .setAutoCancel(false)
-//                    .setWhen(System.currentTimeMillis())
-//                    .setContentTitle("正在下载...")
-//                    .setOngoing(true)   // 禁止滑动删除；
-//                    .setContentText(content)
-//                    .setContentIntent(null);
-//        }
-//        Notification notification = builder.setContentText(content).build();
-
-//        nmcLocal.notify(notificationId, notification);
+        nmcLocal.notify(notificationId, notification);
     }
 
 

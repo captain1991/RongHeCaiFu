@@ -156,8 +156,9 @@ public class RhcfApp extends Application {
 
             // 删除AndFix框架copy的文件；
             boolean result = CommonUtil.deleteSpicificFile(this.getFilesDir().getAbsolutePath() +
+                    File.separator + "apatch" +File.separator+ AppConstants.APATCH_PATH);
+            LogUtil.i("getFilesDir() 目录下的补丁路径"+this.getFilesDir().getAbsolutePath() +
                     File.separator + "apatch" + AppConstants.APATCH_PATH);
-
             if (result) {
                 LogUtil.i("删除getFilesDir() 目录下的补丁成功");
             } else {

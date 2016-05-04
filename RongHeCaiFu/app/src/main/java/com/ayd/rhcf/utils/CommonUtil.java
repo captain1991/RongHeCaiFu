@@ -396,6 +396,11 @@ public class CommonUtil {
     public static String getApatchDownloadPath(Context context) {
         String downDir = getDiskDownloadDir(context);
         if (isNotEmpty(downDir)) {
+            //当没有apatch文件夹时得建文件夹（httpUrlconnection中文件夹必须存在）
+            File patchdir = new File(downDir + File.separator + "apatch");
+            if(!patchdir.exists()){
+                patchdir.mkdir();
+            }
             return downDir + File.separator + "apatch" + File.separator + AppConstants.APATCH_PATH;
         }
         return "";
@@ -411,7 +416,12 @@ public class CommonUtil {
     public static String getApkDownloadPath(Context context) {
         String downDir = getDiskDownloadDir(context);
         if (isNotEmpty(downDir)) {
-            return downDir + File.separator + "apk" + File.separator;
+            //当没有apk文件夹时得建文件夹（httpUrlconnection中文件夹必须存在）
+            File apkdir = new File(downDir + File.separator + "apk");
+            if(!apkdir.exists()){
+                apkdir.mkdir();
+            }
+            return downDir + File.separator + "apk" ;
         }
         return "";
     }

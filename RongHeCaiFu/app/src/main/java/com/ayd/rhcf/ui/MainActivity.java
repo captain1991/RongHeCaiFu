@@ -114,7 +114,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         AppDownloadService.checkNewVersion(this);
 
         // 下载补丁文件(用语热更新)；
-        AppDownloadService.downloadFile(this, AppConstants.PATCH_FILE_PATH, AppConstants.PATCH_DOWN_ID);
+//        AppDownloadService.downloadFile(this, AppConstants.PATCH_FILE_PATH, AppConstants.PATCH_DOWN_ID);
         // 下载apk文件(如果需要更新的话，这里只是测试)；
 //        AppDownloadService.downloadFile(this, AppConstants.APK_FILE_PATH, AppConstants.APP_UPDATE_ID);
 

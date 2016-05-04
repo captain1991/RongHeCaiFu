@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 
 /**
  * Created by yxd on 2016/4/26.
+ * 在activity中调用改变状态栏颜色
+ * 只有在android4.4以上才有效果，并且style中要有windowTranslusent=true.
  */
 public class StatusBarCompat {
     private static final int INVALID_VAL = -1;
